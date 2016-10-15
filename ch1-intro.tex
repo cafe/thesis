@@ -1,0 +1,160 @@
+%---------------------------------------------------------------------------------
+\chapter{Introduction}
+\label{chap:introduction}
+%---------------------------------------------------------------------------------
+
+%Things to tell in Introduction:
+%   1. What is ASR?
+%   2. Current problems of ASR
+%   3. Current techniques for noise robust ASR
+%   4. Our perspectives
+
+% 1. What is ASR?
+
+The objective of automatic speech recognition (ASR) systems is to
+recognize the human speeches, such as words and sentences, using
+algorithms evaluated by a computer without the interference of
+human. ASR is essentially a statistical pattern recognition task,
+classifying speech signals into phonemes or words. To create a
+speech recognition system, a training process that captures the
+speech statistics using techniques such as hidden Markov model (HMM)
+\cite{RabinaHMM} is often used.
+
+% 2. Current problems of ASR
+Currently, state-of-the-art ASR systems can achieve high recognition
+accuracy under clean acoustic environment \cite{cox00forecast}.
+However, under noisy environment, the recognition performance
+degrades significantly due to the statistical mismatch between the
+noisy speech feature and the clean-trained acoustic model of the
+recognition system. The mismatch occurs when the testing condition
+is different from the training condition, as the acoustic
+interferences such as additive background noise change the
+statistics of the speech. It is necessary to address this problem so
+that the recognition accuracy can be improved to a level which is
+applicable to real world problems.
+
+% 3. Current techniques for noise robust ASR
+The problem of mismatch can be attacked from two approaches: One is
+the feature compensation approach, i.e. to compensate the noisy
+speech features prior to the recognition. The other approach, model
+adaptation approach, adapts the acoustic models of the ASR to the
+noisy speech feature. Many feature compensation techniques have been
+proposed, e.g. spectral subtraction \cite{JSLim79}, Wiener filter
+\cite{JSLim79}, feature normalization \cite{MolauConf,MolauPHD} and
+model-based estimation of the clean speech features
+\cite{AceroPHD},\cite{Deng04Cep}-\cite{Deng05Var}. These techniques
+attempt to reduce the effect of the mismatched acoustic environment
+by estimating the clean speech features. On the other hand, model
+adaptation techniques such as parallel model combination (PMC)
+\cite{Gales93PMC,GalesPHD} modifies the distribution of the clean
+speech to account for the effect of additive noise; maximum
+likelihood linear regression (MLLR) adaptation
+\cite{Leggetter95MLLR} techniques transform the means of acoustic
+model's Gaussians to best fit the noisy observation; maximum
+\emph{a~posteriori} (MAP) \cite{Lee94MAP,Huo95MAP} adaptation
+techniques adapt the acoustic model using a Bayesian approach; and
+STAtistical Reestimation (STAR) \cite{MorenoPHD} technique adds
+correction terms to mean and variance of the acoustic Gaussians.
+Because the model adaptation techniques attempt to only match
+training-testing statistics, their performance can never exceed that
+of the matched case.
+
+Recently, a new missing feature theory-based (MFT) approach that is
+inspired by the characteristics of human auditory system attempts to
+recognize speech using mainly reliable speech features
+\cite{Raj05}-\cite{Palomaki04Binaural}. The MFT-based techniques
+usually compensate the corrupted spectral vectors in two steps: the
+first step is to identify which features of the spectrogram-like
+time-space representation of the speech\footnote{For simplicity, we
+called this representation spectrogram. It is usually in log Mel
+filterbank domain. The domain of the spectrogram should be clear
+from the context} are missing, and the second step is to either
+reconstruct the missing features for
+recognition~\cite{Raj05,Raj04,Cooke2001,Hugo04} or discard them
+during the recognition process~\cite{Cooke2001,Hugo04}. Because the
+MFT-based techniques don't make any assumption on noise, they are
+able to handle various kinds of noise, including non-stationary
+noise.
+
+One limiting assumption of most of MFT-based techniques is that
+speech feature vectors of neighbor frames are statistically
+independent. Although this assumption enables simpler evaluation of
+the joint probability of the speech feature vectors, they also
+prohibit the use of the trend information of the speech features in
+time. For example, in Cooke's~\cite{Cooke2001} state-based
+imputation method, the missing features are imputed from the
+acoustical HMM model in the log Mel filterbank domain, i.e., by
+using the HMM, the independence assumption of the speech features is
+implicitly applied. In another example, Raj's cluster-based
+reconstruction of the missing features~\cite{Raj04}, the log Mel
+filterbank feature vectors are assumed to be from an independent,
+identically distributed (IID) multivariate random process and
+modeled by a Gaussian mixture model (GMM). Raj's method then
+reconstructs the missing features using the statistics of the
+trained GMM with an iterative maximum \emph{a posteriori} (MAP)
+estimation method. The assumption of IID process disallows the use
+of inter-frame information.
+
+In another MFT-based technique from Raj, a limited use of
+inter-frame information is applied in a correlation-based
+method~\cite{Raj04}. In this method, inter-frame statistics are used
+to reconstruct the missing features by evaluating cross-covariance
+between two neighboring frames. The correlation method assumes that
+the speech feature vectors in log Mel filterbank domain are
+generated from a single wide-sense stationary multivariate process,
+and the speech feature vectors of every utterance is a realization
+of the process. This method first captures the cross-covariances
+statistics of the spectral features during training and then
+estimates the missing feature using the MAP method during testing.
+Although inter-frame statistics are utilized, the full potential of
+the time information in the spectrogram is not exploited. One reason
+is that the speech signal is very dynamic, and a single wide-sense
+stationary process is insufficient to model the speech spectrogram.
+
+To fully exploit inter-frame information, we propose to use vector
+autoregressive model (VAR) to capture the inter-frame statistics for
+speech feature reconstruction in noisy environment. Although VAR has
+been used to construct the state distribution of HMM
+\cite{VAR_Lutkepohl}, from our survey, it has not been used in the
+field of feature compensation for noise robust speech recognition.
+In this report, We use the VAR to capture the relationship between
+consecutive speech feature vectors. Specifically, the speech feature
+vector of one frame is represented by a linear combination of the
+feature vectors of neighbor frames.
+
+To handle the non-stationary characteristics of speech signal, we
+propose to use multiple VAR models to model the speech feature
+vectors. The classification of the class is performed by grouping
+the concatenated speech feature vectors using K-mean algorithm.
+
+Two feature compensation schemes are proposed based on the VAR model
+and missing feature theory. Experiments has been carried out on the
+AURORA-2 noisy connected digit database. Results proved the
+effectiveness our proposed VAR model in exploiting the inter-frame
+information.
+
+\section{Report Outline}
+This report is organized as follows:
+
+Chapter 2 provides a background information on the statistical
+speech recognition, including the feature extraction, HMM acoustic
+model and pattern classifier. It also discusses the statistical
+effect of noise on speech.
+
+Chapter 3 reviews the previous techniques for noise robust speech
+recognition. For techniques using Bayesian estimation theory to
+estimate the clean features, a simple derivation of the solution is
+provided. The connection and difference of the techniques are
+compared and the relative advantages and weakness of them are
+analyzed.
+
+Chapter 4 discusses the missing feature theory based techniques. We
+first introduce the existing MFT-based techniques, with their
+derivation, followed by the methods for generating data masks.
+
+In Chapter 5, we propose the VAR for modeling the speech feature
+vectors. Two feature compensation schemes is proposed in the MFT
+framework and the experimental results are discussed.
+
+Finally, we conclude in Chapter 6, where we also discuss about the
+directions and schedule of our future research.

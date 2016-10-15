@@ -1,0 +1,32 @@
+%---------------------------------------------------------------------------------
+\chapter{Current Techniques on Noise Robust ASR}
+\label{chap:turning}
+%---------------------------------------------------------------------------------
+Safety and efficiency are two major issues when it comes to vehicle driving and operating, particularly those with relatively large lateral and longitudinal sizes. When performing path planning for vehicles with nonholonomic constraints, we have to consider not only the environment involving obstacles but also the constraints of the vehicle itself. Considering heavy vehicles in a construction site, they have limited maneuverability with a maximum steering angle and are usually maneuvered at a considerably slow speed. To simplify the analysis, the vehicle is supposed to move at a constant speed without slipping thus the mechanical constraints of the vehicle impose a maximum curvature constraint on the reference path. Also, a desired path should have $G^2$ continuity, i.e., the curve of the path is supposed to have continuous curvature profile to ensure a smooth steering behavior. With respect to a static environment containing narrow corridors, a feasible path should be safe in the sense of maximizing the obstacle clearance while satisfying the above constraints. In this chapter, a new path planning framework for nonholonomic vehicles is proposed to generate a $G^2$ smooth path with maximum curvature constraint focusing on vehicle driving in a static environment with narrow corridors.
+
+We start with point cloud representation of the environment and obtain a PRM-like map \cite{kavraki1996probabilistic} with skeleton algorithm \cite{?}
+
+
+
+In this chapter, a new path planning framework for nonholonomic vehicles is proposed to generate a smooth path with maximum curvature constraint. 
+long  This chapter discusses a path calculation method for long vehicle turning, based on a set of
+differential equations. The solution can be numerically obtained for any trajectory
+under different circumstances. We develop a generalized and systematic mathematical approach to determine the trajectories swept by each wheel and other
+related components of the vehicle. The envelope of the trajectories of the vehicle
+can then be derived according to geometric relationships and characteristics. Based
+on numerical analysis results, a 3D simulation is developed in this work for
+different types of long vehicles along with different given turning roads surrounded
+by buildings and other objects. This way we are able to do trajectory planning for
+long vehicle turning.
+
+
+% An example to include eps figure
+
+\begin{figure}
+\centerline{
+\includegraphics[scale=0.8]{mismatch.eps}}
+\vspace*{-2ex} \caption[The acoustic mismatches in signal, feature
+and model spaces]{The acoustic mismatches in signal, feature and
+model spaces (adapted from \cite{Lee98Review}).}
+\label{fig:ch2:mismatch}
+\end{figure}

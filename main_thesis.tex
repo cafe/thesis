@@ -1,0 +1,86 @@
+% ------------------------------------------------------------
+% This is a template for technical reports
+% The Main_thesis.txt is the master control file. It is like the
+% main function in a C code. Here we use it to load individual chapters.
+
+% Author: Xiao Xiong, NTU, Singapore
+% Date: Oct, 2006
+% ------------------------------------------------------------
+
+
+\input{setting}     % Input Global settings
+
+
+
+
+\begin{document}    % Start of the text
+
+
+
+% -------------------------------------------------------------------------------- %
+% --------------------------- Part I. Front Matters ------------------------------ %
+% -------------------------------------------------------------------------------- %
+\input{fm1-cover.tex}       % Input the Cover page
+
+\setlength{\baselineskip}{20pt plus 1pt minus 1pt} % Use 1-1/2 spacing for whole document
+\pagenumbering{roman}   % Use small roman digits for the page number of front matters
+
+\input{fm2-abstract.tex}    % Input the abstract and acknowledgement
+\input{fm3-ack.tex}
+
+\setcounter{secnumdepth}{3} % section numbering depth
+\setcounter{tocdepth}{2}    % count to the depth of sections
+\tableofcontents            % table of contents appears here
+
+\newpage
+\addcontentsline{toc}{section}{\numberline{}\hspace{-.35in}{\bf List of Figures}}
+\listoffigures              % list of figures appears here
+
+\newpage
+\addcontentsline{toc}{section}{\numberline{}\hspace{-.35in}{\bf List of Tables}}
+\listoftables              % list of tables appears here
+
+\input{fm4-abbrev.tex}      % Input the list of abbreviations and notations
+\input{fm5-notation}
+
+
+
+
+
+% -------------------------------------------------------------------------------- %
+% --------------------------- Part II.  The Body ---- ---------------------------- %
+% -------------------------------------------------------------------------------- %
+\input{format-main-body}    % Input the formating
+\include{ch1-intro}         % Include the chapters
+\include{ch2-body}
+\include{ch3-body}
+\include{ch3-conclu}
+
+
+
+
+
+% -------------------------------------------------------------------------------- %
+% --------------------------- Part III. The Back Matters ------------------------- %
+% -------------------------------------------------------------------------------- %
+\appendix
+\include{bm1-appendix}      % Appendix and Publications
+\include{bm2-publication}
+
+% Include the references
+\newpage
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{ieeetran}      % Use the IEEE bibiography style
+\bibliography{IEEEabrv,C:/home/dropbox/bibliography/references}  % Include the BibTex files
+
+
+
+
+
+\end{document}      % End of the text
+
+
+
+% ------------------
+% End of the File
+% ------------------

@@ -1,0 +1,33 @@
+%---------------------------------------------------------------------------------
+\chapter{Current Techniques on Noise Robust ASR}
+\label{chap:current_tech}
+%---------------------------------------------------------------------------------
+
+An example to use eps figure:
+
+In this section, we review the existing techniques for noise robust
+speech recognition in three groups, namely the speech enhancement
+techniques in signal space, the feature compensation techniques in
+feature space and the the model adaptation techniques in model space
+(see Figure \ref{fig:ch2:mismatch}). In signal space speech
+enhancement techniques, the idea is to enhance the noisy signal
+prior to the feature extraction using enhancement techniques such as
+Wiener filter and spectra subtraction. In feature
+space enhancement techniques, the noisy features are transformed to
+clean features through the reverse transform of $D_2$ aims to bring
+noisy feature statistics closer to the clean features to match
+feature to trained model. In the model space enhancement techniques,
+the idea is to adapt the clean trained models to better represents
+the noisy features.
+
+
+% An example to include eps figure
+
+\begin{figure}
+\centerline{
+\includegraphics[scale=0.8]{mismatch.eps}}
+\vspace*{-2ex} \caption[The acoustic mismatches in signal, feature
+and model spaces]{The acoustic mismatches in signal, feature and
+model spaces (adapted from \cite{Lee98Review}).}
+\label{fig:ch2:mismatch}
+\end{figure}

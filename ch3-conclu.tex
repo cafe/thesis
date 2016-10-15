@@ -1,0 +1,34 @@
+%---------------------------------------------------------------------------------
+\chapter{Conclusions and Future Work }
+%---------------------------------------------------------------------------------
+
+\section{Conclusions}
+In this report, we first reviewed the mismatch problem of the
+statistical speech recognition due to acoustic environment change
+and current techniques addressing it. Then the missing feature
+technique is discussed in detail. To effectively utilize the
+inter-frame information of the speech spectrogram, we proposed to
+use the vector autoregressive model for the modeling of speech
+spectral vectors in the log Mel filterbank domain. Further more, a
+feature compensation technique is proposed based on this model
+together with the missing feature theory. The simulation results
+using oracle data mask showed the effectiveness of the proposed
+feature compensation technique. Specifically, we compare Raj's
+MFT-based cluster-based feature compensation technique \cite{Raj04}
+with our approach . The results show that the two methods are
+comparable if clean training is used, and much better with our
+approach when noisy training scheme is used with preprocessing.
+
+In brief, our proposed framework has two novelties. First, we use
+the vector autoregressive model in the modeling of speech feature
+vectors. Although VAR is used in \cite{Kenny90VAR} for the
+derivation of the state-dependent probability of the HMM, it has not
+been used in the feature compensation area to our best knowledge.
+Second novelty is the use of the noisy training scheme with
+preprocessing to minimize the mismatches between the training and
+testing environment.
+
+The potential of the proposed VAR based approach is not fully
+exploited yet. We believe that further research in this filed will
+yield fruitful result. Several directions are discussed in the next
+section.

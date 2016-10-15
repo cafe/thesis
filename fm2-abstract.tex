@@ -1,0 +1,45 @@
+\chapter* {Abstract}
+\addcontentsline{toc}{section}{\numberline{}\hspace{-0.35in}{\bf
+Abstract}}  % Add the Abstract to the table of contents using the specified format
+
+%Objective
+The objective of this research is to develop feature compensation
+techniques to make automatic speech recognition (ASR) systems more
+robust to noise distortions.
+%Importance
+The research is important as the performance of ASR systems degrades
+dramatically in adverse environments, and hence greatly limits the
+speech recognition application deployment.
+%Aim
+In this report, we aim to build a generic framework for feature
+compensation to improve speech recognition accuracy by making speech
+features less affected by noises.
+
+%Introduce my approach
+The degradation of ASR systems under noisy conditions is due to the
+mismatch between the clean-trained acoustical models and noisy
+testing speech features presented to the speech recognition engine.
+Currently, two general approaches are proposed to reduce this
+mismatch. The first is to adapt the acoustical model to the noisy
+testing feature, the other is to compensate the noisy testing
+feature prior to the recognition. We review existing techniques for
+noise robust speech recognition and find that these techniques
+generally ignore inter-frame information of the speech signal. We
+however believe that inter-frame statistics can contribute to noisy
+speech features compensation and hence propose a vector
+autoregressive (VAR) model to model speech feature vectors for
+speech feature reconstruction by either past or future frames
+prediction. We propose two feature compensation schemes based on the
+VAR model and the missing feature theory (MFT). Experiments are
+carried out using the ground-truth data mask on the AURORA-2
+database, and our results show significant improvement to
+recognition accuracy. Specifically, our experimental results showed
+a relative error rate reductions of 86.51\% and 93.9\% with respect
+to the baseline for the subway noise case of test set A and
+restaurant noise case of test set B at signal to noise ratio equals
+to -5dB.
+
+%Future direction
+The proposed VAR modeling framework is a promising research
+direction and we will conduct further research to exploit the full
+potential of this technique.

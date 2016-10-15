@@ -1,0 +1,40 @@
+%---------------------------------------------------------------------------------
+\chapter{Appendix}
+\label{chap:Appendix}
+%---------------------------------------------------------------------------------
+\section{Kronecker Product}\label{appen:Kronecker}
+The Kronecker product is also called matrix direct product and is
+usually represented as $\otimes$. For example, the Kronecker product
+a $2\times2$ matrix $A$ and a $3\times2$ matrix $B$ is define as
+\begin{eqnarray}\label{Kronecker}
+    A\otimes B &=& \left(%
+\begin{array}{cc}
+  a_{11}B & a_{12}B \\
+  a_{21}B & a_{22}B \\
+\end{array}%
+\right)\nonumber\\
+&=&\left(%
+\begin{array}{cccc}
+  a_{11}b_{11} & a_{11}b_{12} & a_{12}b_{11} & a_{12}b_{12} \\
+  a_{11}b_{21} & a_{11}b_{22} & a_{12}b_{21} & a_{12}b_{22} \\
+  a_{11}b_{31} & a_{11}b_{32} & a_{12}b_{31} & a_{12}b_{32} \\
+  a_{21}b_{11} & a_{21}b_{12} & a_{22}b_{11} & a_{22}b_{12} \\
+  a_{21}b_{21} & a_{21}b_{22} & a_{22}b_{21} & a_{22}b_{22} \\
+  a_{21}b_{31} & a_{21}b_{31} & a_{22}b_{31} & a_{22}b_{32} \\
+\end{array}%
+\right)
+\end{eqnarray}
+The result is a $6\times4$ matrix, where any elements from the $A$
+is multiplied with any elements from $B$. For general case, the
+Kronecker product of a $M\times N$ matrix $A$ and a $P\times Q$
+matrix $B$, the resulting matrix is $MP\times NQ$, and the elements
+of the resulting matrix is defined as
+\begin{equation}\label{Kronecker2}
+    c_{\alpha,\beta}=a_{ij}b_{kl}
+\end{equation}
+where
+\begin{eqnarray}
+% \nonumber to remove numbering (before each equation)
+  \alpha &=& P(i-1)+k \\
+  \beta &=& Q(j-1)+l
+\end{eqnarray}

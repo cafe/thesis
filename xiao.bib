@@ -1,0 +1,1317 @@
+
+-------------------------------------------------------
+---------------- Types of Entries ---------------------
+-------------------------------------------------------
+
+1) article (from a journal or magazine)
+Required fields: author, title, journal, year
+Optional fields: volume, number, pages, month, note, key
+
+2) book (A book with an explicit publisher)
+Required fields: author/editor, title, publisher, year
+Optional fields: volume, series, address, edition, month, note, key
+
+3) booklet (A work that is printed and bound, but without a named publisher or sponsoring institution.)
+Required fields: title
+Optional fields: author, howpublished, address, month, year, note, key
+
+4) conference (The same as inproceedings, included for Scribe (markup language) compatibility.)
+Required fields: author, title, booktitle, year
+Optional fields: editor, pages, organization, publisher, address, month, note, key
+
+5) inbook (A part of a book, which may be a chapter (or section or whatever) and/or a range of pages.)
+Required fields: author/editor, title, chapter/pages, publisher, year
+Optional fields: volume, series, address, edition, month, note, key
+
+6) incollection (A part of a book having its own title.)
+Required fields: author, title, booktitle, year
+Optional fields: editor, pages, organization, publisher, address, month, note, key
+
+7) inproceedings (An article in a conference proceedings.)
+Required fields: author, title, booktitle, year
+Optional fields: editor, pages, organization, publisher, address, month, note, key
+
+8) manual (Technical documentation.)
+Required fields: title
+Optional fields: author, organization, address, edition, month, year, note, key
+
+9) mastersthesis
+Required fields: author, title, school, year
+Optional fields: address, month, note, key
+
+10) phdthesis
+Required fields: author, title, school, year
+Optional fields: address, month, note, key
+
+11) proceedings (The proceedings of a conference.)
+Required fields: title, year
+Optional fields: editor, publisher, organization, address, month, note, key
+
+12) techreport (A report published by a school or other institution, usually numbered within a series.)
+Required fields: author, title, institution, year
+Optional fields: type, number, address, month, note, key
+
+13) unpublished (A document having an author and title, but not formally published.)
+Required fields: author, title, note
+Optional fields: month, year, key
+
+14) misc (For use when nothing else fits.)
+Required fields: none
+Optional fields: author, title, howpublished, month, year, note, key
+
+--------------------------------------------------------------------------
+----------------------- Format of the call name --------------------------
+--------------------------------------------------------------------------
+
+{surname of the first author}{publication year}[optional abbreviation of work]
+e.g.: cox00forecast,
+        cox is the surname of the first author,
+        00 (2000) is the publication year,
+        forecast is a simple description of the scope of the paper
+
+
+--------------------------------------------------------------------------
+-------------------------------- The Entries -----------------------------
+--------------------------------------------------------------------------
+
+@Article{cox00forecast,
+  author    = {R. V. Cox and C. A. Kamm and L. R. Rabiner and J. Schroeter and J. G. Wilpon},
+  title     = {Speech and language processing for next-millennium communications services},
+  journal   = pieee,
+  volume    = "88",
+  number    = "8",
+  year      = "2000",
+  pages     = "1314-1337",
+}
+
+@Article{Juang91Review,
+  author    = {B. H. Juang},
+  title     = {Speech recognition in adverse environments},
+  journal   = csl,
+  volume    = "5",
+  year      = "1991",
+  pages     = "275-294",
+}
+
+@Article{Gong95Review,
+  author    = {Y. Gong},
+  title     = {Speech recognition in noisy environments: A survey},
+  journal   = sc,
+  volume    = "16",
+  number    = "3",
+  year      = "1995",
+  pages     = "261-291",
+}
+
+@Article{Lee98Review,
+  author    = {C. H. Lee},
+  title     = {On stochastic feature and model compensation approaches to robust speech recognition},
+  journal   = sc,
+  volume    = "25",
+  number    = "1",
+  year      = "1998",
+  pages     = "29-47",
+}
+
+@Article{Lee00Review,
+  author    = {C. H. Lee and Q. Huo},
+  title     = {On adaptive decision rules and decision parameter adaptation for automatic speech recognition},
+  journal   = pieee,
+  volume    = "88",
+  number    = "8",
+  year      = "2000",
+  pages     = "1241-1269",
+}
+
+@InBook{Ephraim04Review,
+  author =       "Y. Ephraim and Isarel Cohen",
+  title =        "The Electrical Engineering Handbook",
+  chapter =      "Recent Advancements in Speech Enhancement",
+  year =         "2006",
+  publisher =    "CRC Press",
+}
+
+@misc{ViaVoice,
+   title    = "{IBM ViaVoice} application",
+}
+
+@InProceedings{Pearce00AURORA2doc,
+  author =       "D. Pearce and H.-G. Hirsch",
+  title =        "The {AURORA} experimental framework for the performance evaluation of speech recogntion systems under noisy conditions",
+  booktitle =    icslp00,
+  year =         "2000",
+  month =        icslp00month,
+  address =      icslp00addr,
+  volume    =    "4",
+  pages =        "29-32",
+}
+
+@Book{HTK,
+  author =       "S. Young and others",
+  title =        "The {HTK} book",
+  year =         "2006",
+  publisher =    "Cambridege university engineering department",
+  edition =      "3.2.1"
+}
+
+@Article{Rabina89HMM,
+  author    = {L. R. Rabina},
+  title     = {A tutorial on {HMM} and selected applications in speech recognition},
+  journal   = pieee,
+  volume    = "77",
+  number    = "2",
+  year      = "1989",
+  month     = "Feb",
+  pages     = "257-286",
+}
+
+@Article{Deng92TrendedHMM,
+  author    = {L. Deng},
+  title     = {A generalized hidden {Markov} model with state-conditioned trend functions of time for the speech signal},
+  journal   = sp,
+  volume    = "27",
+  number    = "1",
+  year      = "1992",
+  month     = "Apr.",
+  pages     = "65-78",
+}
+
+@Article{Ostendorf96SegHMM,
+  author    = {M. Ostendorf and V. V. Digalakis and O. A. Kimball},
+  title     = {From {HMM's} to segment models: a unified view of stochastic modeling for speech recognition},
+  journal   = tsap,
+  volume    = "4",
+  number    = "5",
+  year      = "1996",
+  month     = "Sep.",
+  pages     = "360-378",
+}
+
+@Article{Kenny91PredicHMM,
+  author    = {P. Kenny and M. Lennig and P. Mermelstein},
+  title     = {A linear predictive {HMM} for vector-valued observations with applications to speech recognition},
+  journal   = tassp,
+  volume    = "38",
+  number    = "2",
+  year      = "1990",
+  month     = "Feb.",
+  pages     = "220-225",
+}
+
+@Article{Dempster77EM,
+  author    = {A. P. Dempster and N. M. Laird and D. B. Rubin},
+  title     = {Maximum likelihood from incomplete data via the EM algorithm},
+  journal   = "Journal of  Royal Statistical Society, Series B (Methodological)",
+  volume    = "39",
+  number    = "1",
+  year      = "1977",
+  pages     = "1-38",
+}
+
+@Book{Lutkepohl93VAR,
+  key =          "VAR",
+  author =       "H. Lutkepohl",
+  title =        "Introduction to multiple time series analysis",
+  year =         "1993",
+  publisher =    "Springer-Verlag",
+  edition =      "2",
+}
+
+@Article{JSLim79,
+  author    = {J. S. Lim and A. V. Oppenheim},
+  title     = {Enhancement and bandwidth compression of noisy speech},
+  journal   = pieee,
+  volume    = "67",
+  number    = "12",
+  year      = "1979",
+  month     = "Dec.",
+  pages     = "1586-1604",
+}
+
+@InProceedings{Berouti79,
+  author =       "M. Berouti and R. Schwartz and J. Makhoul",
+  title =        "Enhancement of speech corrupted by acoustic noise",
+  booktitle =    icassp79,
+  year =         "1979",
+  month =        icassp79month,
+  address =      icassp79addr,
+  pages =        "208-211",
+}
+
+@Article{NVirag99Masking,
+  author    = {Nathalie Virag},
+  title     = {Single channel speech enhancement based on masking properties of the human auditory system},
+  journal   = tsap,
+  volume    = "7",
+  number    = "2",
+  year      = "1999",
+  month     = "Mar.",
+  pages     = "126-137",
+}
+
+@Article{RJMcaulay80,
+  author    = {R. J. Mcaulay and M. L. Malpass},
+  title     = {Speech enhancement using a soft-decision noise suppression filter},
+  journal   = tassp,
+  volume    = "28",
+  number    = "2",
+  year      = "1980",
+  month     = "Apr.",
+  pages     = "137-145",
+}
+
+@Article{Ephraim84MMSE,
+  author    = {Y. Ephraim and D. Malah},
+  title     = {Speech enhancement using a minimum mean square error short time spectral amplitude estimator},
+  journal   = tassp,
+  volume    = "32",
+  number    = "6",
+  year      = "1984",
+  month     = "Dec.",
+  pages     = "1109-1121",
+}
+
+@Article{Ephraim85MMSEL,
+  author    = {Y. Ephraim and D. Malah},
+  title     = {Speech enhancement using a minimum mean square error Log-spectral amplitude estimator},
+  journal   = tassp,
+  volume    = "33",
+  number    = "2",
+  year      = "1985",
+  month     = "Apr.",
+  pages     = "443-445",
+}
+
+@Article{Cappe94MMSE,
+  author    = {Olivier Capp\'{e}},
+  title     = {Elimination of the musical noise phenomenon with the Ephraim and Malah noise suppressor},
+  journal   = tsap,
+  volume    = "3",
+  number    = "2",
+  year      = "1995",
+  month     = "Jul.",
+  pages     = "251-266",
+}
+
+@Article{IYSoon00LowDistortion,
+  author    = {I. Y. Soon and S. N. Koh},
+  title     = {Low distortion speech enhancement},
+  journal   = "IEE Proc. on Visual Image Signal Processing",
+  volume    = "147",
+  number    = "3",
+  year      = "2000",
+  month     = "Jun.",
+  pages     = "247-253",
+}
+
+@Article{Hasan2004_a_priori_SNR,
+  author    = {M. K. Hasan and S. Salahuddin and M. R. Khan},
+  title     = {A modified \emph{a priori} {SNR} for speech enhancement using spectral subtraction rules},
+  journal   = spl,
+  volume    = "11",
+  number    = "4",
+  year      = "2004",
+  month     = "Apr.",
+  pages     = "450-453",
+}
+
+@Article{Cohen04aPrioriSNR,
+  author    = {Israel Cohen},
+  title     = {Speech Enhancement Using a Noncausal \emph{A Priori} {SNR} Estimator},
+  journal   = spl,
+  volume    = "11",
+  number    = "9",
+  year      = "2004",
+  month     = "Sep.",
+  pages     = " 725-728",
+}
+
+@Article{Hu2004Enhance,
+  author    = {Yi Hu and Philipos C. Loizou},
+  title     = {Speech enhancement based on wavelet thresholding the multitaper spectrum},
+  journal   = tsap,
+  volume    = "12",
+  number    = "1",
+  year      = "2004",
+  month     = "Jan.",
+  pages     = "59-67",
+}
+
+@Article{Dendrinos91Enhance,
+  author    = {M. Dendrinos and S. Bakamidis and G. Carayannis},
+  title     = {Speech enhancement from noise: A regenerative approach},
+  journal   = sc,
+  volume    = "10",
+  number    = "2",
+  year      = "1991",
+  month     = "Feb.",
+  pages     = "45-57",
+}
+
+@Article{Jensen95Subspace,
+  author    = {S. H. Jensen and P. C. Hansen and S. D. Hansen and J. A. S{\o}ensen},
+  title     = {Reduction of broad-band noise in speech by truncated {QSVD}},
+  journal   = tsap,
+  volume    = "3",
+  number    = "6",
+  year      = "1995",
+  month     = "Nov.",
+  pages     = "439-444",
+}
+
+@Article{Ephraim95Subspace,
+  author    = {Y. Ephraim and H. L. {Van Trees}},
+  title     = {A signal subspace approach for speech enhancement},
+  journal   = tsap,
+  volume    = "3",
+  number    = "4",
+  year      = "1995",
+  month     = "Jul.",
+  pages     = "251-266",
+}
+
+@InProceedings{Huang98Subspace,
+  author    = {J. Huang and Y. Zhao},
+  title     = {An energy-constraind signal subspace method for speech enhancement and recognition in colored noise},
+  booktitle =    icassp98,
+  year =         "1998",
+  month =        icassp98month,
+  address =      icassp98addr,
+  volume    =    "1",
+  pages =        "377-380",
+}
+
+@Article{Rezayee01Subspace,
+  author    = {A. Rezayee and S. Gazor},
+  title     = {An adaptive {KLT} approach for speech enhancement},
+  journal   = tsap,
+  volume    = "9",
+  number    = "2",
+  year      = "2001",
+  month     = "Feb.",
+  pages     = "87-95",
+}
+
+@Article{Mittal00Subpsace,
+  author    = {U. Mittal and N. Phamdo},
+  title     = {Signal/noise {KLT} based approach for enhancing speech degraded by colored noise},
+  journal   = tsap,
+  volume    = "8",
+  number    = "2",
+  year      = "2000",
+  month     = "Mar.",
+  pages     = "159-167",
+}
+
+@Article{Dautrich83NoiseEffect,
+  author    = {B. Dautrich and L. Rabiner and T. Martin},
+  title     = {On the effects of varying filter bank parameters on isolated word recognition},
+  journal   = tassp,
+  volume    = "31",
+  number    = "4",
+  year      = "1983",
+  month     = "Aug.",
+  pages     = "793-806",
+}
+
+@Article{Picone93sigModeling,
+  author    = {J. W. Picone},
+  title     = {Signal modeling techniques in speech recognition},
+  journal   = pieee,
+  volume    = "81",
+  number    = "9",
+  year      = "1993",
+  month     = "Sep.",
+  pages     = "1215-1247",
+}
+
+@Article{Ephraim99Cep,
+  author    = {Y. Epraim and M. Rahim},
+  title     = {On second order statistics and linear estimation of cepstral coefficients},
+  journal   = tsap,
+  volume    = "7",
+  number    = "2",
+  year      = "1999",
+  month     = "Mar.",
+  pages     = "162-176",
+}
+
+@Book{Papoulis,
+  key =          "probability",
+  author =       "A. Papoulis and S. U. Pillai",
+  title =        "Probability, random variables and stochastic processes",
+  year =         "2002",
+  publisher =    "McGraw Hill",
+  edition =      "4",
+}
+
+@misc{mathword,
+  title =        "{MathWorld} website, available at: http://mathworld.wolfram.com/",
+}
+
+@Book{MitraDSP,
+  author =       "S. K. Mitra",
+  title =        "Digital signal processing: a computer-based approach",
+  year =         "2002",
+  publisher =    "Prentice-Hall",
+  edition =      "2",
+}
+
+@Book{QuatieriDTSSP,
+  author =       "T. F. Quatieri",
+  title =        "Discrete-Time Speech Signal Processing: Principles and Practice",
+  year =         "2001",
+  publisher =    "Prentice-Hall",
+}
+
+@Book{Oppenheim99DTSP,
+  author =       "A. V. Oppenheim and R. W. Schafer and J. R. Buck",
+  title =        "Discrete-Time Signal Processing",
+  year =         "1999",
+  publisher =    "Prentice-Hall",
+}
+
+@Book{Oppenheim75DSP,
+  author =       "A. V. Oppenheim and R. W. Schafer",
+  title =        "Digital signal processing",
+  year =         "1975",
+  publisher =    "Prentice-Hall",
+}
+
+@Book{RabinaSR,
+  author =       "L. Rabiner and B. H. Juang",
+  title =        "Fundamentals of Speech Recognition",
+  year =         "1993",
+  publisher =    "Prentice-Hall",
+}
+
+@Book{Huang00SpokenLangProc,
+  author =       "X. D. Huang and A. Acero and H. W. Hon",
+  title =        "Spoken language processing: A guide to theory, algorithm, and system development",
+  year =         "2001",
+  publisher =    "Prentice-Hall",
+}
+
+@Book{KayEstimation,
+  author =       "S. M. Kay",
+  title =        "Fundamentals of statistical signal processing: Estimation theory",
+  year =         "1993",
+  publisher =    "Prentice-Hall",
+}
+
+@Book{Bekesy60Hearing,
+  author =       "G. von B\'{e}k\'{e}sy",
+  title =        "Experiments in Hearing",
+  year =         "1960",
+  publisher =    "McGraw-Hill",
+}
+
+@Book{Duda01Pattern,
+  author =       "R. O. Duda and P. E. Hart and D. G. Stork",
+  title =        "Pattern classification",
+  year =         "2001",
+  publisher =    "John Wiley \& Sons Inc.",
+  edition =      "2",
+}
+
+@InProceedings{Molau03Norm,
+  author    = {S. Molau and F. Hilger and H. Ney},
+  title     = {Feature space normalization in adverse acoustic conditions},
+  booktitle =    icassp03,
+  year =         "2003",
+  month =        icassp03month,
+  address =      icassp03addr,
+  volume    =    "1",
+  pages =        "656-659",
+}
+
+@InProceedings{Liu93CMN,
+  author    = {F. H. Liu and R. M. Stern and X. Huang and A. Acero},
+  title     = {Efficient cepstral normalization for robust speech recognition},
+  booktitle =    hltw93,
+  year =         "1993",
+  month =        hltw93month,
+  address =      hltw93addr,
+  pages =        "69-74",
+}
+
+@InProceedings{Acero95CMN,
+  author    = {A. Acero and X. Huang},
+  title     = {Augmented cepstral normalization for robust speech recognition},
+  booktitle =    asr95
+  year =         "1995",
+  month =        asr95month,
+  address =      asr95addr,
+}
+
+@Article{Moreno98DataDriven,
+  author    = {P. J. Moreno and B. Raj and R. M. Stern},
+  title     = {Data-driven environmental compensation for speech recognition: A unified appraoch},
+  journal   = sc,
+  volume    = "24",
+  number    = "4",
+  year      = "1998",
+  month     = "Jul.",
+  pages     = "267-285",
+}
+
+@InProceedings{Deng00SPLICE,
+  author    = {L. Deng and A. Acero and M. Plumpe and X. D. Huang},
+  title     = {Large-vocabulary speech recognition under adverse acoustic environment},
+  booktitle =    icslp00,
+  year =         "2000",
+  month =        icslp00month,
+  address =      icslp00addr,
+  volumn =       "3",
+  pages =        "806-809",
+}
+
+@InProceedings{Deng01SPLICE,
+  author    = {L. Deng and A. Acero and L. Jiang and J. Droppo and X. D. Huang},
+  title     = {High-performance robust speech recognition using stereo training data},
+  booktitle =    icassp01,
+  year =         "2001",
+  month =        icassp01month,
+  address =      icassp01addr,
+  volumn =       "1",
+  pages =        "301-304",
+}
+
+@InProceedings{Droppo01SPICE_AURORA2,
+  author    = {J. Droppo and L. Deng and A. Acero},
+  title     = {Evaluation of the {SPLICE} algorithm on the {Aurora2} database},
+  booktitle =    euro01,
+  year =         "2001",
+  month =        euro01month,
+  address =      euro01addr,
+  pages =        "217-220",
+}
+
+@InProceedings{Droppo02SPLICE_Uncertainty,
+  author    = {J. Droppo and L. Deng and A. Acero},
+  title     = {Uncertainty decoding with {SPLICE} for noise robust speech recognition},
+  booktitle =    icassp02,
+  year =         "2002",
+  month =        icassp02month,
+  address =      icassp02addr,
+  volumn =       "1"
+  pages =        "57-60",
+}
+
+@InProceedings{Deng02Bayesian,
+  author    = {L. Deng and J. Droppo and A. Acero},
+  title     = {A {Bayesian} approach to speech feature enhancement using the dynamic cepstral prior},
+  booktitle =    icassp02,
+  year =         "2002",
+  month =        icassp02month,
+  address =      icassp02addr,
+  volumn =       "1"
+  pages =        "829-832",
+}
+
+@Article{Deng05Compare,
+  author    = {L. Deng and J. Wu and J. Droppo and A. Acero},
+  title     = {Analysis and comparison of two speech feature extraction/compensation algorithms},
+  journal   = spl,
+  volume    = "12",
+  number    = "6",
+  year      = "2005",
+  month     = "Jun.",
+  pages     = "477-480",
+}
+
+@Article{Deng03Noise,
+  author    = {L. Deng and J. Droppo amd A. Acero},
+  title     = {Recursive estimation of nonstationary noise using iterative stochastic approximation for robust speech recognition},
+  journal   = tsap,
+  volume    = "11",
+  number    = "6",
+  year      = "2003",
+  month     = "Nov.",
+  pages     = "568-580",
+}
+
+@Article{Deng04Cep,
+  author    = {L. Deng and J. Droppo amd A. Acero},
+  title     = {Estimating cepstrum of speech under the presence of noise using a joint prior of static and dynamic features},
+  journal   = tsap,
+  volume    = "12",
+  number    = "3",
+  year      = "2004",
+  month     = "May",
+  pages     = "218-223",
+}
+
+@Article{Deng04LogMel,
+  author    = {L. Deng and J. Droppo amd A. Acero},
+  title     = {Enhancement of Log Mel power spectra of speech using a phase-sensitive model of the acoustic environment and sequential estimation of the corrupting noise},
+  journal   = tsap,
+  volume    = "12",
+  number    = "2",
+  year      = "2004",
+  month     = "Mar.",
+  pages     = "133-143",
+}
+
+@Article{Deng05Var,
+  author    = {L. Deng and J. Droppo amd A. Acero},
+  title     = {Dynamic compensation of {HMM} variances using the feature enhancement uncertainty computed from a parametri model of speech distortion},
+  journal   = tsap,
+  volume    = "13",
+  number    = "3",
+  year      = "2005",
+  month     = "May",
+  pages     = "412-421",
+}
+
+@Article{Gales93PMC,
+  author    = {M. J. F. Gales and S. J. Young},
+  title     = {Cepstral parameter compensation for {HMM} recognition},
+  journal   = sc,
+  volume    = "12",
+  number    = "3",
+  year      = "1993",
+  month     = "Jul.",
+  pages     = "231-239",
+}
+
+@Article{Leggetter95MLLR,
+  author    = {C. J. Leggetter and P. C. Woodland},
+  title     = {Maximum likelihood linear regression for speaker adaptation of continuous density hidden {Markov} models},
+  journal   = csl,
+  volume    = "9",
+  number    = "2",
+  year      = "1995",
+  month     = "Apr.",
+  pages     = "171-185",
+}
+
+@Article{Lee94MAP,
+  author    = {J. L. Gauvain and C. H. Lee},
+  title     = {Maximum \emph{a~posterirori} estimation for multivariate {Gaussian} mixture observations of {Markov} chains},
+  journal   = tsap,
+  volume    = "2",
+  number    = "2",
+  year      = "1994",
+  month     = "Apr.",
+  pages     = "291-298",
+}
+
+@Article{Huo95MAP,
+  author    = {Q. Huo and C. Chan and C. H. Lee},
+  title     = {Bayesian adaptive learning of the parameters of hidden {Markov} model for speech recgonition},
+  journal   = tsap,
+  volume    = "3",
+  number    = "5",
+  year      = "1995",
+  month     = "Sep.",
+  pages     = "334-345",
+}
+
+@Article{Lee98Review,
+  author    = {C. H. Lee},
+  title     = {On stochastic feature and model compensation approaches to robust speech recognition},
+  journal   = sc,
+  volume    = "25",
+  number    = "1",
+  year      = "1998",
+  month     = "Aug.",
+  pages     = "29-47",
+}
+
+@Article{Huo00BPC,
+  author    = {Q. Huo and C. H. Lee},
+  title     = {A {Bayesian} predictive approach to robust speech recognition},
+  journal   = tsap,
+  volume    = "8",
+  number    = "8",
+  year      = "2000",
+  month     = "Nov.",
+  pages     = "200-204",
+}
+
+@Article{Raj05MFT,
+  author    = {B. Raj and R. M. Stern},
+  title     = {Missing-feature approaches in speech reconition},
+  journal   = spm,
+  volume    = "22",
+  number    = "5",
+  year      = "2005",
+  month     = "Sep.",
+  pages     = "101-116",
+}
+
+@Article{Raj04MFT,
+  author    = {B. Raj and M. L. Seltzer and R. M. Stern},
+  title     = {Reconstruction of missing features for robust speech recognition},
+  journal   = sc,
+  volume    = "43",
+  number    = "4",
+  year      = "2004",
+  pages     = "275-296",
+}
+
+@Article{Cooke2001MFT,
+  author    = {M. Cooke and P. Green and L. Josifovski and A. Vizinho},
+  title     = {Robust automatic speech recognition with missing and uncertain acoustic data},
+  journal   = sc,
+  volume    = "34",
+  year      = "2001",
+  pages     = "267-285",
+}
+
+@InProceedings{VanHamme03MFT,
+  author    = {Hugo {Van hamme}},
+  title     = {Robust speech recognition using missing feature theory in the cepstral or {LDA} domain},
+  booktitle =    euro03,
+  year =         "2003",
+  month =        euro03month,
+  address =      euro03addr,
+  pages =        "3089-3092",
+}
+
+@InProceedings{VanHamme04MFT,
+  author    = {Hugo {Van hamme}},
+  title     = {Robust speech recognition using cepstral domain missing data techniques and noisy mask},
+  booktitle =    icassp04,
+  year =         "2004",
+  month =        icassp04month,
+  address =      icassp04addr,
+  volumn =       "1",
+  pages =        "213-216",
+}
+
+@Article{Seltzer04Mask,
+  author    = {M. L. Seltzer and B. Raj and R. M. Stern},
+  title     = {A {Bayesian} framework for spectrographic mask estimation for missing feature speech recognition},
+  journal   = sc,
+  volume    = "43",
+  year      = "2004",
+  number    = "4",
+  pages     = "379-393",
+}
+
+@InProceedings{Barker00Mask,
+  author    = {J. Barker and L. Josifovski and M. Cooke and P. Green},
+  title     = {Soft decisions in missing data techniques for robust automatic speech recognition},
+  booktitle =    icslp00,
+  year =         "2000",
+  month =        icslp00month,
+  address =      icslp00addr,
+  pages =        "373-376",
+}
+
+@InProceedings{Barker01MFT,
+  author    = {J. Barker and M. Cooke and P. Green},
+  title     = {Robust {ASR} based on clean speech models: An evaluation of missing data techniques for connected digit recognition in noise},
+  booktitle =    euro01,
+  year =         "2001",
+  month =        euro01month,
+  address =      euro01addr,
+  pages =        "213-216",
+}
+
+@Article{Palomaki04Binaural,
+  author    = {K. J. Palomaki and G. J. Brown and D. L. Wang},
+  title     = {A binaural processor for missing data speech recognition in the presence of noise and small-room reverberation},
+  journal   = sc,
+  volume    = "43",
+  year      = "2004",
+  number    = "4",
+  pages     = "361-378",
+}
+
+@PhdThesis{AceroPHD,
+  author =       "A. Acero",
+  title =        "Acoustical and environmental robustness in automatic speech recognition",
+  year =         "1990",
+  school =       cmuece,
+}
+
+@PhdThesis{OhshimaPHD,
+  author =       "Y. Ohshima",
+  title =        "Environmental robustness in speech recognition using physiologically-motivated signal processing",
+  year =         "1993",
+  school =       cmuece,
+}
+
+@PhdThesis{GalesPHD,
+  author =       "Y. Ohshima",
+  title =        "Model-based techniques for noise robust speech recognition",
+  year =         "1995",
+  school =       "Gonville and Caius College, University of Cambridge",
+}
+
+@PhdThesis{MorenoPHD,
+  author =       "P. J. Moreno",
+  title =        "Speech recognition in noisy environments",
+  year =         "1996",
+  school =       cmuece,
+}
+
+@PhdThesis{RajPHD,
+  author =       "B. Raj",
+  title =        "Reconstruction of incomplete spectrograms for robust speech recognition",
+  year =         "2000",
+  school =       cmuece,
+}
+
+@PhdThesis{MolauPHD,
+  author =       "S. Molau",
+  title =        "Normalization in the acoustical feature space for improved speech recognition",
+  year =         "2003",
+  school =       "Aachen University",
+}
+
+@PhdThesis{CPChenPHD,
+  author =       "C. P. Chen",
+  title =        "Noise robustness in automatic speech recognition",
+  year =         "2004",
+  school =       "Electrical Engineering, University of Washington",
+}
+
+@PhdThesis{XiangLiPHD,
+  author =       "X. Li",
+  title =        "Combination and generation of parallel feature streams for improved speech recognition",
+  year =         "2005",
+  school =       cmuece,
+}
+
+@Article{Furui81CMN,
+  author    = {S. Furui},
+  title     = {Cepstral analysis technique for automatic speaker verification},
+  journal   = tassp,
+  volume    = "29",
+  number    = "2",
+  year      = "1981",
+  pages     = "254-272",
+}
+
+@InProceedings{viikki98CVN,
+  author    = {O. Viikki and D. Bye and K. Laurila},
+  title     = {A recursive feature vector normalization approach for robust speech recognition in noise},
+  booktitle =    icassp98,
+  year =         "1998",
+  month =        icassp98month,
+  address =      icassp98addr,
+  pages =        "733-736",
+}
+
+@Article{Torre05HEQ,
+  author    = {A. de la Torre and A. M. Peinado and J. C. Segura and J. L. Perez-Cordoba and M. C. Benitez and A. J. Rubio},
+  title     = {Histogram equalization of speech representation for robust Speech Recognition},
+  journal   = tsap,
+  volume    = "13",
+  number    = "3",
+  year      = "2005",
+  pages     = "355-366",
+}
+
+@Article{Hermansky94RASTA,
+  author    = {H. Hermansky and N. Morgan},
+  title     = {{RASTA} processing of speech},
+  journal   = tsap,
+  volume    = "2",
+  number    = "4",
+  year      = "1994",
+  pages     = "578-589",
+}
+
+@Article{Kanedera99Modulation,
+  author    = {N. Kanedera and T. Arai and H. Hermansky and M. Pavel},
+  title     = {On the relative importance of various components of the modulation spectrum for automatic speech recognition},
+  journal   = sc,
+  volume    = "28",
+  number    = "1",
+  year      = "1999",
+  pages     = "43-55",
+}
+
+@Article{Hung06Temporal,
+  author    = {J.-W. Hung and L.-S. Lee},
+  title     = {Optimization of temporal filters for constructing robust features in speech recognition},
+  journal   = taslp,
+  volume    = "14",
+  number    = "3",
+  year      = "2006",
+  pages     = "808-832",
+}
+
+
+@InProceedings{Chen02MVA,
+  author =       "C.-P. Chen and J. Blimes and K. Kirchhoff",
+  title =        "Low-resource noise-robust feature post-processing on {AURORA} 2.0",
+  booktitle =    icslp02,
+  year =         "2002",
+  month =        icslp02month,
+  address =      icslp02addr,
+  pages =        "2445-2448",
+}
+
+@Book{Vaseghi00DSP,
+  author =       "S. V. Vaseghi",
+  title =        "Advanced digital signal processing and noise reduction",
+  year =         "2000",
+  edition =      "2",
+  publisher =    "John Wiley \& Sons",
+}
+
+
+@Book{Proakis96DSP,
+  author =       "J. G. Proakis and D. G. Manolakis",
+  title =        "Digital signal processing-principles, algorithms, and applications",
+  year =         "1996",
+  edition =      "3",
+  publisher =    "Prentice-Hall",
+}
+
+@InProceedings{Hermansky95Temporal,
+  author =       "Hynek Hermansky",
+  title =        "Exploring temporal domain for robustness in speech recognition",
+  booktitle =    "International Congress on Acoustic '95",
+  year =         "1995",
+  month =        "Jun.",
+  address =      "Trondheim, Norway",
+  volumn =       "2",
+  pages =        "61-64",
+}
+
+@Article{Nadeu97Temporal,
+  author    = {Climent Nadeu and Pau Pach\`{e}s-Leal and Biing-Hwang Juang},
+  title     = {Filtering the time sequences of spectral parametrs for speech recognition},
+  journal   = sc,
+  volume    = "22",
+  number    = "4",
+  month     = "Sep.",
+  year      = "1997",
+  pages     = "315-332",
+}
+
+@InProceedings{Hermansky97ModuSpec,
+  author =       "Hynek Hermansky",
+  title =        "The modulation spectrum in the automatic recognition of speech",
+  booktitle =    asru97,
+  year =         "1997",
+  month =        asru97month,
+  address =      asru97addr,
+  pages =        "140-147",
+}
+
+@Article{Hermansky98Ears,
+  author    = {Hynek Hermansky},
+  title     = {Should recognizers have ears},
+  journal   = sc,
+  volume    = "25",
+  number    = "1",
+  month     = "Aug.",
+  year      = "1998",
+  pages     = "3-27",
+}
+
+@Article{deVeth98Norm,
+  author    = {Johan {de Veth} and Louis Boves},
+  title     = {Channel normalization techniques for automatic speech recognition over the telephone},
+  journal   = sc,
+  volume    = "25",
+  number    = "1",
+  month     = "Aug.",
+  year      = "1998",
+  pages     = "149-164",
+}
+
+@Article{Arai99Temporal,
+  author    = {Takayuki Arai and Misha Pavel and Hynek Hermansky and Carlos Avendano},
+  title     = {Syllable intelligibility for temporally-filtered {LPC} cepstral trajectories},
+  journal   = jasa,
+  volume    = "105",
+  number    = "5",
+  month     = "May",
+  year      = "1999",
+  pages     = "2783-2791",
+}
+
+@Article{Yuo99Temporal,
+  author    = {Kuo-Hwei Yuo and Hsiao-Chuan Wang},
+  title     = {Robust features for noisy speech recognition based on temporal trajectory filtering of short-time autocorrelation sequences },
+  journal   = sc,
+  volume    = "28",
+  number    = "1",
+  month     = "May",
+  year      = "1999",
+  pages     = "13-24",
+}
+
+@Article{Nadeu01Temporal,
+  author    = {Climent Nadeu and Du\s{?}an Macho and Javier Hernando},
+  title     = {Time and frequency filtering of filter-bank energies for robust {HMM} speech recognition},
+  journal   = sc,
+  volume    = "34",
+  number    = "1",
+  month     = "Apr.",
+  year      = "2001",
+  pages     = "93-114",
+}
+
+@InProceedings{Greenberg01ModuSpec,
+  author =       "Steven Greenberg and Takayuki Arai",
+  title =        "The relationship between speech intelligibility and the complex modulation spectrum",
+  booktitle =    euro01,
+  year =         "2001",
+  month =        euro01month,
+  address =      euro01addr,
+  pages =        "473-476",
+}
+
+@InProceedings{Athineos03FreqLP,
+  author =       "Marios Athineos and Daniel P. W. Ellis",
+  title =        "Frequency-domain linear prediction for temporal features",
+  booktitle =    asru03,
+  year =         "2003",
+  month =        asru03month,
+  address =      asru03addr,
+  pages =        "473-476",
+}
+
+@Article{Atlas03ModuSpec,
+  author    = {Les Atlas and Shihab A. Shamma},
+  title     = {Joint Acoustic and Modulation Frequency},
+  journal   = eurasip_jasp,
+  volume    = "2003",
+  number    = "7",
+  year      = "2003",
+  pages     = "668-675",
+}
+
+@InProceedings{Atlas04ModuSpec,
+  author =       "Les Atlas and Qin Li and Jeffrey Thompson",
+  title =        "Homomorphic modulation spectra",
+  booktitle =    icassp04,
+  year =         "2004",
+  month =        icassp04month,
+  address =      icassp04addr,
+  volumn =       "2",
+  pages =        "761-764",
+}
+
+@Article{Kusumoto05Modu,
+  author    = {Akiko Kusumoto and Takayuki Arai and Keisuke Kinoshita and Nao Hodoshima and Nancy Vaughan},
+  title     = {Modulation enhancement of speech by a pre-processing algorithm for improving intelligibility in reverberant environments},
+  journal   = sc,
+  volume    = "45",
+  year      = "2005",
+  pages     = "101-113",
+}
+
+@InProceedings{Aikawa93DynaCep,
+  author =       "K. Aikawa and H. Singer and H. Kawahara and Y. Tohkura",
+  title =        "A dynamic cepstrum incorporating time-frequency masking and its application to continuous speech recognition",
+  booktitle =    icassp93,
+  year =         "1993",
+  month =        icassp93month,
+  address =      icassp93addr,
+  volumn =       "2",
+  pages =        "668-671",
+}
+
+@InProceedings{Neumeyer94Temporal,
+  author =       "L. Neumeyer and M. Weintraub",
+  title =        "Probabilistic optimum filtering for robust speech recognition",
+  booktitle =    icassp94,
+  year =         "1994",
+  month =        icassp94month,
+  address =      icassp94addr,
+  volumn =       "1",
+  pages =        "417-420",
+}
+
+@InProceedings{Makino83Temporal,
+  author =       "Makino, S. and Kawabata, T. and Kido, K.",
+  title =        "Recognition of consonant based on the perceptron model",
+  booktitle =    icassp83,
+  year =         "1983",
+  month =        icassp83month,
+  address =      icassp83addr,
+  volumn =       "8",
+  pages =        "738-741",
+}
+
+@Article{Hilger06QuantileHEQ,
+  author    = {Florian Hilger and Hermann Ney},
+  title     = {Quantile based histogram equalization for noise robust large vocabulary speech recognition},
+  journal   = taslp,
+  volume    = "14",
+  number    = "3",
+  year      = "2006",
+  pages     = "845-854",
+}
+
+@Article{Xiao07TSNspl,
+  author    = {Xiong Xiao and Eng Siong Chng and Haizhou Li},
+  title     = {Temporal structure normalization of speech feature for robust speech recognition},
+  journal   = spl,
+  volume    = "14",
+  number    = "7",
+  year      = "2007",
+  pages     = "500-503",
+}
+
+@InProceedings{Xiao07TSNicassp,
+  author =       "Xiong Xiao and Eng Siong Chng and Haizhou Li",
+  title =        "Normalizing the speech modulation spectrum for robust speech recognition",
+  booktitle =    icassp07,
+  year =         "2007",
+  month =        icassp07month,
+  address =      icassp07addr,
+  volumn =       "4",
+  pages =        "1021-1024",
+}
+
+@InProceedings{Xiao07TSNeuro,
+  author =       "Xiong Xiao and Eng Siong Chng and Haizhou Li",
+  title =        "Evaluating the temporal structure normalisation technique on the Aurora-4 task",
+  booktitle =    euro07,
+  year =         "2007",
+  month =        euro07month,
+  address =      euro07addr,
+  volumn =       "x",
+  pages =        "x-x",
+}
+
+@InProceedings{Garcia06TES,
+  author =       "L. Garc\'{\i}a and J.C. Segura and C. Ben\'{\i}tez and J. Ram\'{\i}rez and A. de la Torre",
+  title =        "Normalization of the inter-frame information using smoothing filtering",
+  booktitle =    icslp06,
+  year =         "2006",
+  month =        icslp06month,
+  address =      icslp06addr,
+  volumn =       "1",
+  pages =        "369-372",
+}
+
+@Article{Chen07MVA,
+  author    = {C.-P. Chen and J. A. Bilmes},
+  title     = {{MVA} Processing of Speech Features},
+  journal   = taslp,
+  volume    = "15",
+  number    = "1",
+  year      = "2007",
+  pages     = "257-270",
+}
+
+@techreport{Parihar02Aurora4doc,
+  author        = "N. Parihar and J. Picone",
+  title         = "Aurora Working Group: {DSR} Front End {LVCSR} Evaluation {AU}/384/02",
+  institution   = "Institute for Signal and Infomation Processing, Mississippi State Univ.",
+  address       = "MS",
+  month         = dec,
+  year          = "2002"
+};
+
+@electronic{HTKwebsite,
+  title         = "The {HTK} Website",
+  url           = "http://htk.eng.cam.ac.uk/",
+  month         = dec,
+  year          = "2002"
+};
+
+@manual{AFEmanual,
+  title         = "Speech processing, transmission and quality aspects
+                ({STQ}); distributed speech recognition; advanced front-end feature
+                extraction algorithm; compression algorithms",
+  howpublished  = "{{ES} 202 050 Recommendation}",
+  organization  = "ETSI",
+  year          = "2002"
+};
+
+@Article{Shannon95temporal,
+  author    = {R. V. Shannon and F.-G. Zeng and V. Kamath and J. Wygonski and M. Ekelid},
+  title     = {Speech Recognition with Primarily Temporal Cues},
+  journal   = "Science, New Series",
+  volume    = "270",
+  number    = "5234",
+  year      = "1995",
+  pages     = "303-304",
+};
+
+@Article{Boll79Subtraction,
+  author    = {Steven F. Boll},
+  title     = {Suppression of acoustic noise in speech using spectral subtraction},
+  journal   = tassp,
+  volume    = "27",
+  number    = "2",
+  year      = "1979",
+  pages     = "113-120",
+};
+
+@Article{Lockwood92subtraction,
+  author    = {P. Lockwood and J. Boudy},
+  title     = {Experiments with a nonlinear spectral subtractor ({NSS}), {H}idden {M}arkov {M}odels
+              and projection, for robust recognition in cars},
+  journal   = sc,
+  volume    = "11",
+  number    = "2-3",
+  year      = "1992",
+  pages     = "215-228",
+};
+
+@Article{Suh07classHEQ,
+  author    = {Youngjoo Suh and Mikyong Ji and Hoirin Kim},
+  title     = {Probabilistic class histogram equalization for robust speech recognition},
+  journal   = spl,
+  volume    = "14",
+  number    = "4",
+  year      = "2007",
+  pages     = "287-290",
+};
+
+@Article{Segura04segHEQ,
+  author    = {J. C. Segura and Carmen Ben$\acute{i}$tez and A. de la Torre and A. J. Rubio and Javier Ram$\acute{i}$rez},
+  title     = {Cepstral domain segmental nonlinear feature transformations for robust speech recognition},
+  journal   = spl,
+  volume    = "11",
+  number    = "5",
+  year      = "2004",
+  pages     = "517-520",
+};
+
+@Article{Morgan05temp_feature,
+  author    = {N. Morgan and Q. Zhu and A. Stolcke and K. Sonmez and S. Sivadas
+               and T. Shinozaki and M. Ostendorf and P. Jain and H. Hermansky and
+               D. Ellis and G. Doddington and B. Chen and O. Cetin and H. Bourlard and M. Athineos},
+  title     = {Pushing the envelop--aside},
+  journal   = spm,
+  volume    = "22",
+  number    = "5",
+  year      = "2005",
+  pages     = "81-88",
+};
+
+@Article{Afify05compensation,
+  author    = {Mohamed Afify},
+  title     = {Accurate compensation in the log-spectral domain for noisy speech recognition},
+  journal   = tsap,
+  volume    = "13",
+  number    = "3",
+  year      = "2005",
+  pages     = "388-398",
+};
+
+@Article{Kim07MMI_LST,
+  author    = {Donghyun Kim and Dongsuk Yook},
+  title     = {Linear spectral transformation for robust speech recognition using maximum mutual information},
+  journal   = spl,
+  volume    = "14",
+  number    = "7",
+  year      = "2007",
+  pages     = "496-499",
+};
+
+@Article{Furui86dynamicfeature,
+  author    = {S. Furui},
+  title     = {Speaker independent isolated word recognizer using dynamic features of speech spectrum},
+  journal   = tassp,
+  volume    = "34",
+  number    = "1",
+  year      = "1986",
+  pages     = "52-59",
+};
